@@ -1,26 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom font styles */
+.font-lancelot {
+  font-family: 'Lancelot', cursive !important;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom animations */
+@keyframes meteor1 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(5px, 5px) scale(1.2);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(85vw, 45vh) scale(0.5);
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.9), 0 0 50px 10px rgba(255, 255, 255, 0.5), -70px 0 30px 3px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(95vw, 50vh) scale(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes meteor2 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(8px, 8px) scale(1.2);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(50vw, 70vh) scale(0.5);
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.9), 0 0 50px 10px rgba(255, 255, 255, 0.5), -70px 0 30px 3px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(55vw, 80vh) scale(0);
+  }
+}
+
+@keyframes meteor3 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(8px, 8px) scale(1.2);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(40vw, 35vh) scale(0.5);
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.9), 0 0 50px 10px rgba(255, 255, 255, 0.5), -55px 0 30px 3px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(45vw, 40vh) scale(0);
+  }
+}
+
+/* Improved fireflyPulse animation */
+@keyframes fireflyPulse {
+  0% { 
+    opacity: 0.2; 
+    transform: scale(0.9) rotate(10deg);
+  }
+  50% { 
+    opacity: 0.9; 
+    transform: scale(1.1) rotate(0deg);
+  }
+  100% { 
+    opacity: 0.3; 
+    transform: scale(0.95) rotate(-10deg);
+  }
+}
+
+/* Improved more natural fireflyFloat animation */
+@keyframes fireflyFloat {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(10px, -15px) rotate(5deg); }
+  40% { transform: translate(20px, -5px) rotate(-3deg); }
+  60% { transform: translate(5px, -10px) rotate(0deg); }
+  80% { transform: translate(-10px, 5px) rotate(6deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Animation utility classes */
+.animate-meteor1 {
+  animation: meteor1 1.2s ease-in forwards;
+}
+
+.animate-meteor2 {
+  animation: meteor2 1.4s ease-in 0.7s forwards;
+}
+
+.animate-meteor3 {
+  animation: meteor3 1.1s ease-in 0.3s forwards;
+}
+
+.animate-firefly-pulse {
+  animation: fireflyPulse var(--duration, 3s) infinite alternate ease-in-out var(--delay, 0s);
+}
+
+.animate-firefly-float {
+  animation: fireflyFloat var(--duration, 15s) infinite alternate ease-in-out var(--delay, 0s);
 }
