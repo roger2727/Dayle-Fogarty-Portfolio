@@ -15,7 +15,7 @@ const ContactSection = () => {
     glowSize: number;
   };
 
-  const [animationStarted, setAnimationStarted] = useState(false);
+
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -285,42 +285,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Add keyframe animations for fireflies */}
-      <style jsx global>{`
-        @keyframes fireflyPulse {
-          0% {
-            opacity: 0.2;
-            transform: scale(0.9) rotate(${Math.random() * 10}deg);
-          }
-          50% {
-            opacity: ${Math.random() * 0.3 + 0.7}; /* Randomized higher opacity */
-            transform: scale(1.1) rotate(0deg);
-          }
-          100% {
-            opacity: 0.4;
-            transform: scale(0.95) rotate(-${Math.random() * 10}deg);
-          }
-        }
-        
-        @keyframes fireflyFloat {
-          0% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(10px, -10px) rotate(5deg);
-          }
-          50% {
-            transform: translate(15px, -5px) rotate(-5deg);
-          }
-          75% {
-            transform: translate(-5px, 7px) rotate(8deg);
-          }
-          100% {
-            transform: translate(5px, -10px) rotate(-3deg);
-          }
-        }
-      `}</style>
     </section>
   );
 };

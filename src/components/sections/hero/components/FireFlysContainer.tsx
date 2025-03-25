@@ -1,6 +1,7 @@
+// components/hero/FirefliesContainer.tsx
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import Firefly from './Fireflys';
 import BushFly from './bushFlys';
 
@@ -9,46 +10,49 @@ interface FirefliesContainerProps {
   visible: boolean;
 }
 
-interface FireflyData {
-  id: number;
-  bottom: string;
-  left: string;
-  size: number;
-  hue: number;
-  opacity: number;
-  glowSize: number;
-  duration: number;
-  delay: number;
-}
+// Generate deterministic firefly positions
+const createFireflies = () => {
+  return Array(3).fill(null).map((_, i) => ({
+    id: i + 200,
+    bottom: `${35 + (i * 6)}%`,
+    left: `${5 + (i * 7)}%`, 
+    size: 5,
+    hue: 120 + (i * 5),
+    opacity: 0.7 + (i * 0.1),
+    glowSize: 3,
+    duration: 7000 + (i * 1000),
+    delay: i * 100
+  }));
+};
+
+// Generate deterministic bushfly positions
+const createBushflies = () => {
+  return Array(4).fill(null).map((_, i) => ({
+    id: i + 300,
+    bottom: `${5 + (i * 2)}%`,
+    left: `${(i * 25)}%`,
+    size: 4, 
+    hue: 120 + (i * 2),
+    opacity: 0.6 + (i * 0.05),
+    glowSize: 3,
+    duration: 9000 + (i * 1000),
+    delay: i * 100
+  }));
+};
 
 const FirefliesContainer: React.FC<FirefliesContainerProps> = ({ visible }) => {
-  const fireflies: FireflyData[] = useMemo(() => 
-    Array(3).fill(null).map((_, i) => ({
-      id: i + 200,
-      bottom: `${Math.random() * 20 + 35}%`,
-      left: `${Math.random() * 20 + 5}%`, 
-      size: 5,
-      hue: Math.floor(Math.random() * 15) + 120,
-      opacity: Math.random() * 0.3 + 0.7,
-      glowSize: 3,
-      duration: Math.floor(Math.random() * 4000) + 7000,
-      delay: Math.floor(Math.random() * 300)
-    })),
-  []);
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+  const fireflies = createFireflies();
+  const bushflies = createBushflies();
 
-  const bushflies: FireflyData[] = useMemo(() => 
-    Array(4).fill(null).map((_, i) => ({
-      id: i + 300,
-      bottom: `${Math.random() * 10 + 5}%`,
-      left: `${Math.random() * 100}%`,
-      size: 4, 
-      hue: Math.floor(Math.random() * 15) + 120,
-      opacity: Math.random() * 0.3 + 0.6,
-      glowSize: 3,
-      duration: Math.floor(Math.random() * 5000) + 9000,
-      delay: Math.floor(Math.random() * 400)
-    })),
-  []);
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className="absolute w-full h-full z-20 pointer-events-none">

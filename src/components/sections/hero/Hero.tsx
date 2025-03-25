@@ -1,20 +1,30 @@
+// components/sections/Hero.tsx
 'use client';
 
 import { useEffect, useState } from "react";
+
+import HeroText from '../hero/components/HeroText';
+import Landscapes from '../hero/components/Landscapes';
 import Stars from "./components/stars";
 import MeteorShower from "./components/MetorShower";
 import Moon from "./components/Moon";
 import FirefliesContainer from "./components/FireFlysContainer";
-import HeroText from "./components/HeroText";
-import Landscapes from "./components/Landscapes";
 
 const Hero: React.FC = () => {
-  const [animationStarted, setAnimationStarted] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [meteorShowerStarted, setMeteorShowerStarted] = useState<boolean>(false);
-  const [fireflyAnimationStarted, setFireflyAnimationStarted] = useState<boolean>(false);
+  const [hydrated, setHydrated] = useState(false);
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [meteorShowerStarted, setMeteorShowerStarted] = useState(false);
+  const [fireflyAnimationStarted, setFireflyAnimationStarted] = useState(false);
+  
+  // Ensure client-side hydration completes before rendering content
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
   
   useEffect(() => {
+    if (!hydrated) return;
+    
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
     }, 100);
@@ -27,7 +37,7 @@ const Hero: React.FC = () => {
     // Timer for fireflies to begin after mountains and text animations complete
     const fireflyTimer = setTimeout(() => {
       setFireflyAnimationStarted(true);
-    }, 3000); // Slightly reduced delay for better transition
+    }, 3000);
     
     // Timer for meteor shower to begin after other animations
     const meteorShowerTimer = setTimeout(() => {
@@ -40,7 +50,12 @@ const Hero: React.FC = () => {
       clearTimeout(fireflyTimer);
       clearTimeout(meteorShowerTimer);
     };
-  }, []);
+  }, [hydrated]);
+
+  // Render nothing during server-side rendering
+  if (!hydrated) {
+    return <div className='bg-gradient-to-t from-blue-800 via-indigo-900 to-slate-950 min-h-screen'></div>;
+  }
 
   return (
     <div className='bg-gradient-to-t from-blue-800 via-indigo-900 to-slate-950 min-h-screen flex items-center justify-center overflow-hidden relative'>

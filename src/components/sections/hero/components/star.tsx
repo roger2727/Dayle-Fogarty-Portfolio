@@ -1,3 +1,4 @@
+// components/hero/Star.tsx
 'use client';
 
 import React from 'react';
@@ -7,6 +8,7 @@ interface StarProps {
   left: string;
   size: string;
   opacity: number;
+  id?: number; 
 }
 
 const Star: React.FC<StarProps> = ({ top, left, size, opacity }) => {
