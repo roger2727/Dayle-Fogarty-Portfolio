@@ -1,4 +1,3 @@
-// components/hero/Star.tsx
 'use client';
 
 import React from 'react';
@@ -8,19 +7,22 @@ interface StarProps {
   left: string;
   size: string;
   opacity: number;
-  id?: number; 
+  id?: number;
+  pulse?: boolean;
+  color?: string;
 }
 
-const Star: React.FC<StarProps> = ({ top, left, size, opacity }) => {
+const Star: React.FC<StarProps> = ({ top, left, size, opacity, pulse = false, color = 'white' }) => {
   return (
     <div 
-      className="absolute bg-white rounded-full"
+      className={`absolute rounded-full ${pulse ? 'animate-pulse' : ''}`}
       style={{
         top,
         left,
         width: size,
         height: size,
         opacity,
+        backgroundColor: color,
         zIndex: 0
       }}
     />

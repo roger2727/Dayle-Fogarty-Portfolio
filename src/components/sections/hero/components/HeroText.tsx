@@ -2,16 +2,12 @@
 
 import React from 'react';
 
-interface HeroTextProps {
-  animationStarted: boolean;
-}
-
-const HeroText: React.FC<HeroTextProps> = ({ animationStarted }) => {
+const HeroText: React.FC = () => {
   return (
-    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20`}>
-      <div className={`backdrop-blur-sm bg-black/20 px-8 py-6 rounded-lg border border-amber-300/30 transition-opacity duration-1000 ${
-        animationStarted ? 'opacity-100 delay-[3000ms]' : 'opacity-0'
-      }`}>
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20">
+      <div 
+        className="backdrop-blur-sm bg-black/30 px-8 py-6 rounded-lg border border-amber-300/30 opacity-0 animate-fade-in"
+      >
         <div className="relative">
           <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
             <div className="mb-1">

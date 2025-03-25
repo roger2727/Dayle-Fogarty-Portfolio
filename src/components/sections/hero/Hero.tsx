@@ -1,14 +1,14 @@
-// components/sections/Hero.tsx
 'use client';
 
 import { useEffect, useState } from "react";
 
 import HeroText from '../hero/components/HeroText';
 import Landscapes from '../hero/components/Landscapes';
-import Stars from "./components/stars";
+
 import MeteorShower from "./components/MetorShower";
 import Moon from "./components/Moon";
 import FirefliesContainer from "./components/FireFlysContainer";
+import Stars from "./components/stars";
 
 const Hero: React.FC = () => {
   const [hydrated, setHydrated] = useState(false);
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
         <MeteorShower active={meteorShowerStarted} />
         <Moon animationStarted={animationStarted} />
         <FirefliesContainer visible={fireflyAnimationStarted} />
-        <HeroText animationStarted={animationStarted} />
+        <HeroText />
         <Landscapes isLoading={isLoading} animationStarted={animationStarted} />
       </div>
     </div>
