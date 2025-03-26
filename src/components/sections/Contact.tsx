@@ -1,21 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 
 const ContactSection = () => {
-  // Define the type for fireflies
-  type Firefly = {
-    id: number;
-    top: string;
-    left: string;
-    size: number;
-    animationDuration: string;
-    animationDelay: string;
-    hue: number;
-    opacity: number;
-    glowSize: number;
-  };
-
-
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -24,6 +9,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   
   // Social media links
   const socialLinks = [
@@ -73,23 +59,41 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage('');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
       });
       
-      // Reset submitted state after 5 seconds
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    }, 1500);
+      const data = await response.json();
+      
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        
+        // Reset submitted state after 5 seconds
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        setErrorMessage(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setErrorMessage('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,6 +123,13 @@ const ContactSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {errorMessage && (
+                  <div className="bg-red-900 bg-opacity-50 border border-red-800 text-red-100 px-4 py-3 rounded relative mb-4" role="alert">
+                    <strong className="font-bold">Error: </strong>
+                    <span className="block sm:inline">{errorMessage}</span>
+                  </div>
+                )}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-300 mb-2">Your Name</label>
@@ -202,7 +213,7 @@ const ContactSection = () => {
             )}
           </div>
           
-          {/* Contact Info */}
+          {/* Contact Info - Keeping original code for this section */}
           <div className="md:w-1/3">
             {/* Connect section styled to match "My Creative Quest" */}
             <div className="mb-8">
