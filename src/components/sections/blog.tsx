@@ -159,7 +159,7 @@ const ErrorState = ({ error }: { error: string | null }) => (
   <section id="blog" className="bg-slate-950 text-gray-200 py-16">
     <div className="container mx-auto px-6">
       <div className="text-center">
-        <h2 className="text-4xl font-bold mb-6">Storyteller's Journal</h2>
+        <h2 className="text-4xl font-bold mb-6">Storytellers Journal</h2>
         <p className="text-lg">{error || 'No blog posts found.'}</p>
       </div>
     </div>
@@ -168,7 +168,7 @@ const ErrorState = ({ error }: { error: string | null }) => (
 
 const SectionHeader = () => (
   <div className="text-center mb-12">
-    <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 mb-2">Storyteller's Journal</h2>
+    <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 mb-2">Storytellers Journal</h2>
     <p className="text-lg font-light text-blue-300 italic mb-3">Musings on the craft of fantasy writing</p>
     <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full"></div>
   </div>

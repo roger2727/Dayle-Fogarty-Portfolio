@@ -1,20 +1,7 @@
-// app/api/get-substack-posts/route.ts
+
 import { NextResponse } from 'next/server';
 import Parser from 'rss-parser';
 
-interface SubstackPost {
-  title: string;
-  content: string;
-  pubDate: string;
-  categories?: string[];
-  link: string;
-  creator?: string;
-  imageUrl?: string;
-  enclosure?: {
-    url?: string;
-    type?: string;
-  };
-}
 
 export async function GET() {
   try {

@@ -39,7 +39,7 @@ const AboutSection = () => {
             
             <div className="space-y-4 mb-8 animate-on-scroll fade-up" style={{ animationDelay: '0.2s' }}>
               <p className="leading-relaxed text-gray-300">
-                Welcome to my world of imagination! As an emerging fantasy writer, I'm on a journey to craft realms where dragons soar over ancient forests, where magic flows through forgotten ruins, and where heroes rise from the unlikeliest of beginnings. My passion for storytelling began with dusty tomes discovered in my grandmother's attic and continues to grow with each word I write.
+             {"Welcome to my world of imagination As an emerging fantasy writer Im on a journey to craft realms where dragons soar over ancient forests, where magic flows through forgotten ruins and where heroes rise from the unlikeliest of beginnings. My passion for storytelling began with dusty tomes discovered in my grandmother's attic and continues to grow with each word I write"}
               </p>
             </div>
             
@@ -52,7 +52,7 @@ const AboutSection = () => {
               
               <div className="max-w-lg relative">
                 <p className="italic text-gray-400 pl-4 border-l border-indigo-500/30">
-                  Stories are bridges between minds. Through my writing, I hope to create worlds that readers can inhabit and characters they'll remember long after closing the book.
+            {"      Stories are bridges between minds. Through my writing I hope to create worlds that readers can inhabit and characters theyll remember long after closing the book."}
                 </p>
               </div>
             </div>

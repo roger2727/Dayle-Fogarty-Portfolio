@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-// Import placeholder book cover - replace with your actual book cover
 import bookCover from '../../../public/cover.jpeg';
 
 const ProjectsSection = () => {
-  // Define the type for fireflies
-  type Firefly = {
-    id: number;
-    top: string;
-    left: string;
-    size: number;
-    animationDuration: string;
-    animationDelay: string;
-    hue: number;
-    opacity: number;
-    glowSize: number;
-  };
+
 
   useEffect(() => {
     // Animate elements on page load
@@ -113,7 +100,7 @@ const ProjectsSection = () => {
               
               <div className="space-y-6">
                 <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-gray-400 max-w-xl">
-                  "This story examines how we present different faces to the world, and how those personas shape our reality and relationships. I'm excited about its potential to connect with readers."
+                 { "This story examines how we present different faces to the world and how those personas shape our reality and relationships. Im excited about its potential to connect with readers."}
                 </blockquote>
                 
                 <div className="flex flex-wrap gap-2">

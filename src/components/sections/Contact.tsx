@@ -102,7 +102,7 @@ const ContactSection = () => {
         {/* Section Header with matching gradient styling */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 mb-2">Connect With Me</h2>
-          <p className="text-lg font-light text-blue-300 italic mb-3">Let's discuss stories and creative possibilities</p>
+          <p className="text-lg font-light text-blue-300 italic mb-3">Lets discuss stories and creative possibilities</p>
           <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full"></div>
         </div>
 
@@ -118,7 +118,7 @@ const ContactSection = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400 mb-4">Message Sent!</h3>
                 <p className="text-gray-300">
-                  Thank you for reaching out! I'll get back to you as soon as possible.
+                  Thank you for reaching out Ill get back to you as soon as possible.
                 </p>
               </div>
             ) : (

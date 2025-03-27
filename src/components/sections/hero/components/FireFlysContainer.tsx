@@ -1,7 +1,7 @@
-// components/hero/FirefliesContainer.tsx
+
 'use client';
 
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Firefly from './Fireflys';
 import BushFly from './bushFlys';
 
