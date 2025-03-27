@@ -15,7 +15,7 @@ export async function GET() {
       },
     });
 
-    const substackUrl = 'https://rogermitch27.substack.com/feed';
+    const substackUrl = 'https://dayfog.substack.com/feed';
     const feed = await parser.parseURL(substackUrl);
     
     const items = feed.items.map(item => {

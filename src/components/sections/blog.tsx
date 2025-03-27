@@ -294,7 +294,7 @@ const PostFooter = ({ post, isSmall = false }: { post: ProcessedPost, isSmall?: 
 const ViewAllButton = () => (
   <div className="text-center mt-10">
     <a 
-      href="https://rogermitch27.substack.com" 
+      href="https://dayfog.substack.com/" 
       target="_blank" 
       rel="noopener noreferrer"
       className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-indigo-500/30"

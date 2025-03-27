@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 const HeroText: React.FC = () => {
@@ -21,6 +19,11 @@ const HeroText: React.FC = () => {
           
           <p className="text-xl md:text-3xl text-sky-200 mb-3 font-serif italic drop-shadow-[0_3px_5px_rgba(0,0,0,0.9)]">
             Weaver of Fantastical Realms
+          </p>
+
+          {/* Acknowledgement of Country */}
+          <p className="text-xs text-amber-300/70 italic mt-4 max-w-[280px] mx-auto">
+            I acknowledge the Traditional Custodians of this land, and pay respect to Elders past, present and emerging.
           </p>
         </div>
       </div>
