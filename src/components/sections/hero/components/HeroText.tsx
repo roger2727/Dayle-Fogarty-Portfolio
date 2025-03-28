@@ -22,11 +22,12 @@ const HeroText: React.FC = () => {
           </p>
 
           {/* Acknowledgement of Country */}
-          <p className="text-xs text-amber-300/70 italic mt-4 max-w-[280px] mx-auto">
-            I acknowledge the Traditional Custodians of this land, and pay respect to Elders past, present and emerging.
-          </p>
+ 
         </div>
       </div>
+      <p className="text-xs opacity-0 animate-acknowledgement text-amber-300/70 italic mt-4 max-w-[240px] md:max-w-[280px] mx-auto">
+  I acknowledge the Traditional Custodians of this land, and pay respect to Elders past, present and emerging.
+</p>
     </div>
   );
 };

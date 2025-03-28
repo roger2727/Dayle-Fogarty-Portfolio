@@ -219,5 +219,20 @@
 .ping-animation {
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+@keyframes ack-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes ack-fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-acknowledgement {
+  animation: 
+    ack-fade-in 1.5s ease-out 5s forwards, /* Fades in over 1.5s after 2s delay */
+    ack-fade-out 1s ease-in 10s forwards;   /* Fades out over 1s after 9s total delay */
+}
 
 

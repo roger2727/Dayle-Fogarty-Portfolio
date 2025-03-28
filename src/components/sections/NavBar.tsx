@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import DFLogo from '../../../public/DF.png'
+import Image from 'next/image';
 
 const Navbar = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
@@ -22,9 +24,9 @@ const Navbar = () => {
     }`}>
       {/* Logo */}
       <div className="relative group">
-        <span className="text-6xl md:text-7xl font-lancelot bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-shimmer">
-          DF
-        </span>
+
+        <Image src={DFLogo} alt="DF Logo" width={60} height={60} />
+  
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-indigo-400/30 to-purple-400/30 blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
       </div>
 
