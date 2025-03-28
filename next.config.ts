@@ -1,4 +1,11 @@
 module.exports = {
+  webpack(config: any) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
   experimental: {
     turbo: {
       rules: {

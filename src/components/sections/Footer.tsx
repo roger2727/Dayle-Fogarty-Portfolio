@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-// import GoodReadsLogo from '../../../public/application.svg'
-// import ThreadsLogo from '../../../public/threads.svg'
+import GoodReadsLogo from '../../../public/application.svg'
+import ThreadsLogo from '../../../public/threads.svg'
 const Footer = () => {
   return (
     <footer className="bg-slate-950 text-gray-200 py-8 relative z-10 border-t border-blue-900/30">
@@ -34,12 +34,12 @@ const Footer = () => {
             </a>
             <a href="#" className="text-indigo-300 hover:text-indigo-200 transition-colors duration-300">
             <div className="w-5 h-5 flex items-center justify-center">
-            {/* <GoodReadsLogo className="w-full h-full" /> */}
+            <GoodReadsLogo className="w-full h-full" />
             </div>
             </a>
             <a href="#" className="text-indigo-300 hover:text-indigo-200 transition-colors duration-300">
             <div className="w-5 h-5flex items-center justify-center">
-            {/* <ThreadsLogo className="w-full h-full" /> */}
+            <ThreadsLogo className="w-full h-full" />
             </div>
             </a>
           </div>

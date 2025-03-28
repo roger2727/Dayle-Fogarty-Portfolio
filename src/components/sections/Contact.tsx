@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import GoodReadsLogo from '../../../public/application.svg'
-// import ThreadsLogo from '../../../public/threads.svg'
+import GoodReadsLogo from '../../../public/application.svg'
+import ThreadsLogo from '../../../public/threads.svg'
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -28,7 +28,7 @@ const ContactSection = () => {
       name: 'Threads',
       icon: (
         <div className="w-8  h-8 flex items-center justify-center">
-        {/* <ThreadsLogo className="w-full h-full" /> */}
+        <ThreadsLogo className="w-full h-full" />
       </div>
       ),
       url: 'https://threads.net/yourhandle'
@@ -37,7 +37,7 @@ const ContactSection = () => {
       name: 'Goodreads',
       icon: (
         <div className="w-8  h-8 flex items-center justify-center">
-        {/* <GoodReadsLogo className="w-full h-full" /> */}
+        <GoodReadsLogo className="w-full h-full" />
       </div>
       ),
       url: 'https://goodreads.com/author/show/yourid'
