@@ -58,8 +58,8 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <div className='bg-gradient-to-t from-blue-800 via-indigo-900 to-slate-950 min-h-screen flex items-center justify-center overflow-hidden relative'>
-      <div className="relative w-full h-screen overflow-hidden">
+    <div className='bg-gradient-to-t from-blue-800 via-indigo-900 to-slate-950 min-h-svh flex items-center justify-center overflow-hidden relative'>
+      <div className="relative w-full h-svh m:h-screen overflow-hidden">
         <Stars />
         <MeteorShower active={meteorShowerStarted} />
         <Moon animationStarted={animationStarted} />

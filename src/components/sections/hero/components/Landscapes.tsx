@@ -52,6 +52,7 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
         }`}
         style={{ zIndex: 4 }}
       />
+              <div className="to-pink-950 w-full h-24"></div>
     </>
   );
 };

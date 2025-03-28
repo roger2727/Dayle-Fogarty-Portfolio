@@ -61,10 +61,10 @@ const AboutSection = () => {
           {/* Image - appears above text on mobile, to the right on desktop */}
           <div className="md:w-2/5 flex justify-center items-center md:self-center mb-6 md:mb-0 animate-on-scroll fade-up " >
             <div className="relative max-w-md"> 
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 bg-blue-400 opacity-40 rounded-full blur-xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-55 h-70 md:w-64 md:h-80 bg-blue-400 opacity-40 rounded-full blur-xl"></div>
               {/* Image container */}
               <div className="relative z-10 mx-auto">
-                <div className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+                <div className="w92 h-92 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden">
                   <Image 
                     src={image} 
                     alt="Fantasy Writer" 
@@ -81,20 +81,21 @@ const AboutSection = () => {
   {/* Clean Horizontal Experience Elements */}
   <div className="relative mt-6 mb-8">
     {/* Horizontal timeline line positioned to run through the dots */}
-    <div className="absolute left-0 right-0 top-6.5 h-px bg-gray-700 animate-on-scroll path-draw"></div>
+    <div className=" hidden md:block absolute left-0 right-0 top-6.5 h-px bg-gray-700 animate-on-scroll path-draw"></div>
     
     {/* Experience Elements */}
     <div className="flex flex-col md:flex-row justify-between items-start">
       {/* Element 1 - Emotional Journey */}
       <div className="relative md:w-1/3 mb-8 md:mb-0 md:pr-6 animate-on-scroll fade-up" style={{ animationDelay: '0.2s' }}>
         {/* Adjusted dot with controlled ping animation */}
-        <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-indigo-400">
+        <div className="hidden md:block absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-indigo-400">
           {/* Separate ping element that won't affect the dot visibility */}
           <span className="absolute inset-0 rounded-full bg-indigo-400 ping-animation" style={{ transformOrigin: 'center' }}></span>
         </div>
         
         {/* Content with subtle hover effect */}
         <div className="group md:text-center pt-6 cursor-default">
+          
           <h4 className="text-lg font-medium text-indigo-300 mb-2">Emotional Journey</h4>
           <div className="bg-gray-900/60 p-4 rounded border-t border-indigo-500/30 transform group-hover:border-indigo-500/60 transition-all duration-300 group-hover:translate-y-[-2px] group-hover:shadow-lg group-hover:shadow-indigo-900/20">
             <p className="text-gray-400 text-sm">I strive to create stories that resonate on an emotional level, where readers experience triumph, loss, wonder, and hope alongside characters they grow to care deeply about.</p>
@@ -105,7 +106,7 @@ const AboutSection = () => {
       {/* Element 2 - Thematic Exploration */}
       <div className="relative md:w-1/3 mb-8 md:mb-0 md:px-6 animate-on-scroll fade-up" style={{ animationDelay: '0.4s' }}>
         {/* Adjusted dot with controlled ping animation */}
-        <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-purple-400">
+        <div className="hidden md:block  absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-purple-400">
           {/* Separate ping element that won't affect the dot visibility */}
           <span className="absolute inset-0 rounded-full bg-purple-400 ping-animation" style={{ animationDelay: '0.3s', transformOrigin: 'center' }}></span>
         </div>
@@ -122,7 +123,7 @@ const AboutSection = () => {
       {/* Element 3 - Immersive Worlds */}
       <div className="relative md:w-1/3 md:pl-6 animate-on-scroll fade-up" style={{ animationDelay: '0.6s' }}>
         {/* Adjusted dot with controlled ping animation */}
-        <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-blue-400">
+        <div className="hidden md:block  absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-blue-400">
           {/* Separate ping element that won't affect the dot visibility */}
           <span className="absolute inset-0 rounded-full bg-blue-400 ping-animation" style={{ animationDelay: '0.6s', transformOrigin: 'center' }}></span>
         </div>
