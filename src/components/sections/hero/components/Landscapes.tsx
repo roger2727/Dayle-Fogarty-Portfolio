@@ -66,7 +66,7 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
     backMountain: 0.3,
     middleMountain: 0.5,
     lastMountain: 0.7,
-    bushes: isMobile ? 0 : 0.9 // Disable scroll effect for bushes on mobile
+    bushes: 0.9 // Now applying scroll effect for bushes on all devices
   };
 
   const getTransform = (speed: number, initialOffset: string) => {
@@ -83,7 +83,7 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
       <Image 
         src={backMountain} 
         alt='back mountains' 
-        className={`w-full h-auto absolute bottom-0 transition-transform duration-[1200ms] ease-out ${
+        className={`w-full h-120 md:h-auto absolute bottom-0 transition-transform duration-[1200ms] ease-out ${
           animationStarted ? 'translate-y-0' : 'translate-y-full'
         }`}
         style={{ 
@@ -100,7 +100,7 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
       <Image 
         src={middleMountain} 
         alt='middle mountains' 
-        className={`w-full h-auto absolute bottom-0 transition-transform duration-[1200ms] ease-out ${
+        className={`w-full h-120 md:h-auto absolute bottom-0 transition-transform duration-[1200ms] ease-out ${
           animationStarted ? 'translate-y-0 delay-[100ms]' : 'translate-y-full'
         }`}
         style={{ 
@@ -117,7 +117,7 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
       <Image 
         src={lastMountain} 
         alt='last mountains' 
-        className={`w-full h-auto absolute bottom-0 transition-transform duration-[1200ms] ease-out ${
+        className={`w-full h-70 md:h-auto absolute bottom-0 transition-transform duration-[1200ms] ease-out ${
           animationStarted ? 'translate-y-0 delay-[600ms]' : 'translate-y-full'
         }`}
         style={{ 
@@ -130,7 +130,7 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
         }}
       />
       
-      {/* Bushes - No scroll effect on mobile */}
+      {/* Bushes - Now part of the scrolling animation on all devices */}
       <Image 
         src={bushes} 
         alt='bushes' 
@@ -139,14 +139,10 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
         }`}
         style={{ 
           zIndex: 4,
-          transform: isMobile && initialAnimationDone 
-            ? 'translateY(0)' 
-            : getTransform(speeds.bushes, '100%'),
+          transform: getTransform(speeds.bushes, '100%'),
           willChange: 'transform',
           transition: initialAnimationDone 
-            ? isMobile 
-              ? 'none' 
-              : 'transform 0.1s linear' 
+            ? 'transform 0.1s linear' 
             : 'transform 1200ms ease-out 700ms'
         }}
       />
