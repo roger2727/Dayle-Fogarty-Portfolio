@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import bookCover from '../../../public/cover.jpeg';
+import bookCover from '../../../public/bookCpver.png';
 
 const ProjectsSection = () => {
   useEffect(() => {
@@ -75,13 +75,13 @@ const ProjectsSection = () => {
                   <Image 
                     src={featuredProject.coverImage} 
                     alt={featuredProject.title}
-                    className="w-full h-full object-cover blur-sm filter brightness-75"
+                    className="w-full h-full object-cover blur-xs filter brightness-75"
                     width={256}
                     height={384}
                   />
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <div className="mt-4 bg-black/30 backdrop-blur-md px-5 py-3 rounded-full border border-indigo-500/30">
-                      <p className="text-blue-200 text-sm font-medium">Completed</p>
+                      <p className="text-blue-200 text-sm font-medium">In Progress</p>
                     </div>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import backMountain from '../../../../../public/upscalemedia-transformedBackMountain.png';
 import middleMountain from '../../../../../public/upscalemedia-transformed.png';
-import lastMountain from '../../../../../public/Untitled.png';
+import lastMountain from '../../../../../public/treecave.png';
 import bushes from '../../../../../public/fuck.png';
 
 interface LandscapesProps {
