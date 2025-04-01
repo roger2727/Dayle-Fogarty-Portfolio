@@ -14,24 +14,11 @@ interface LandscapesProps {
 
 const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) => {
   const [scrollY, setScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
   const requestRef = useRef<number | null>(null);
   const previousScrollRef = useRef(0);
   const [initialAnimationDone, setInitialAnimationDone] = useState(false);
 
-  useEffect(() => {
-    // Check if mobile device
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Standard mobile breakpoint
-    };
-    
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkIfMobile);
-    };
-  }, []);
+
 
   const animateScroll = () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -146,8 +133,6 @@ const Landscapes: React.FC<LandscapesProps> = ({ isLoading, animationStarted }) 
             : 'transform 1200ms ease-out 700ms'
         }}
       />
-      
-      <div className="to-pink-950 w-full h-24"></div>
     </>
   );
 };
