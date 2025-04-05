@@ -96,8 +96,8 @@ const ProjectsSection = () => {
                 {featuredProject.description}
               </p>
               <div className="space-y-6">
-                <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-gray-400 max-w-xl">
-                This story follows Delphine, a young woman who uncovers the truth about her birth parents—an identity that makes her a target of the ruthless Gillington Empire and its ruler, King Barclay. As she navigates a world built on deception, Delphine embarks on a journey to fulfill her foster father's last wish: to reunite a book with its long-lost author. With the help of a silver-tongued conman, a thug with a soft side, and a navigator full of hidden talents, she must unravel the secrets of the past before those in power bury them forever.
+              <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-gray-400 max-w-xl">
+                This story follows Delphine, a young woman who uncovers the truth about her birth parents—an identity that makes her a target of the ruthless Gillington Empire and its ruler, King Barclay. As she navigates a world built on deception, Delphine embarks on a journey to fulfill her foster father&apos;s last wish: to reunite a book with its long-lost author. With the help of a silver-tongued conman, a thug with a soft side, and a navigator full of hidden talents, she must unravel the secrets of the past before those in power bury them forever.
                 </blockquote>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-300 text-sm transition-all hover:border-blue-500/50 hover:bg-blue-900/40">

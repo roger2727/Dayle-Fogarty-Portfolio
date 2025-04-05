@@ -25,7 +25,7 @@ const HeroText: React.FC = () => {
  
         </div>
       </div>
-      <p className="text-xs opacity-0 animate-acknowledgement text-amber-300/70 italic mt-4 max-w-[240px] md:max-w-[280px] mx-auto">
+      <p className="text-md opacity-0 animate-acknowledgement text-amber-300/70 italic mt-4 max-w-[300px] md:max-w-[300px] mx-auto">
   I acknowledge the Traditional Custodians of this land, and pay respect to Elders past, present and emerging.
 </p>
     </div>
