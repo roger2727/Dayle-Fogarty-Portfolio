@@ -30,8 +30,8 @@ const ProjectsSection = () => {
   ];
 
   const featuredProject = {
-    title: "Current Manuscript",
-    description: "A completed novel exploring themes of duality and perception. The full manuscript is available for professional consideration.",
+    title: "The Book with Two Faces",
+    description: "Book one of a series, exploring themes of truth, identity, and power. The full manuscript is available for professional consideration.",
     coverImage: bookCover,
     status: "Primary Project - Completed",
     completion: 100,
@@ -40,18 +40,18 @@ const ProjectsSection = () => {
 
   const otherProjects = [
     {
-      title: "Whispers in the Forgotten Woods",
-      status: "Concept Development",
-      description: "A tale of mystery and ancient power hidden within a forest that appears on maps but has been lost to human memory for centuries.",
-      completion: 15,
-      tags: ["Mystery", "Adventure", "Folklore"]
+      title: "After Dark",
+      status: "Third Draft",
+      description: "Follows Annie, a female journalist in modern-day Newcastle, NSW, who becomes entangled in a supernatural underworld after a near-fatal possession by an ancient entity, Nori. As she tracks down two rogue exorcists to uncover the truth, she finds herself battling dark forces and forging unlikely alliances, while confronting her own trauma and the looming threat of two worlds colliding.",
+      completion: 60,
+      tags: ["New Adult","Occult","Mystery", "Australiana", "Folklore"]
     },
     {
-      title: "Guardians of the Crystal Spire",
-      status: "Initial Outline",
-      description: "First book in a potential series exploring the conflict between elemental forces and those chosen to maintain the balance between worlds.",
-      completion: 5,
-      tags: ["Epic Fantasy", "Elemental Magic", "Series"]
+      title: "Sable Tides",
+      status: "Concept Development",
+      description: "Follows Una, a Harptown soldier who, in defying her father's plans for a decorated career, faces the weight of choosing her own path after fate brings her up against an unlikely foe. Amidst a world of ancient magic, political power, and forbidden gods, Una finds herself torn between her duty, her destiny, and Captain Conrad—an unexpected ''what if'' figure who represents the future she might claim of her own free will.",
+      completion: 35,
+      tags: ["Epic Fantasy","Folklore","Romance", "Mystery", "Occult"]
     }
   ];
 
@@ -97,7 +97,7 @@ const ProjectsSection = () => {
               </p>
               <div className="space-y-6">
                 <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-gray-400 max-w-xl">
-                  This story examines how we present different faces to the world and how those personas shape our reality and relationships.
+                This story follows Delphine, a young woman who uncovers the truth about her birth parents—an identity that makes her a target of the ruthless Gillington Empire and its ruler, King Barclay. As she navigates a world built on deception, Delphine embarks on a journey to fulfill her foster father's last wish: to reunite a book with its long-lost author. With the help of a silver-tongued conman, a thug with a soft side, and a navigator full of hidden talents, she must unravel the secrets of the past before those in power bury them forever.
                 </blockquote>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-300 text-sm transition-all hover:border-blue-500/50 hover:bg-blue-900/40">
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
                     Mystery
                   </span>
                   <span className="px-4 py-2 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-300 text-sm transition-all hover:border-cyan-500/50 hover:bg-cyan-900/40">
-                    Psychological
+                  A Dash of Romance
                   </span>
                   <span className="px-4 py-2 rounded-full bg-red-900/30 border border-red-500/30 text-red-300 text-sm transition-all hover:border-red-500/50 hover:bg-red-900/40">
                     Adrenaline-Pumping

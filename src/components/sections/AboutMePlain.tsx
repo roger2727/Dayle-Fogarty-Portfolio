@@ -39,12 +39,12 @@ const AboutSection = () => {
             
             <div className="space-y-4 mb-8 animate-on-scroll fade-up" style={{ animationDelay: '0.2s' }}>
               <p className="leading-relaxed text-gray-300">
-             {"Welcome to my world of imagination As an emerging fantasy writer Im on a journey to craft realms where dragons soar over ancient forests, where magic flows through forgotten ruins and where heroes rise from the unlikeliest of beginnings. My passion for storytelling began with dusty tomes discovered in my grandmother's attic and continues to grow with each word I write"}
+             {"As an emerging fantasy writer, I’m on a quest to create realms where ships sail treacherous seas, magic flows through forgotten ruins, and heroes rise from the unlikeliest of beginnings.My passion for storytelling began as a child, escaping into tales like The Famous Five and The Chronicles of Narnia. I wrote my first stories at seven and took writing more seriously at fourteen—when my sister asked me to write her English creative assignment. That moment sparked something in me, and I haven’t stopped writing fantasy since.Now you'll find me writing between all the duties of a parenthood. When I'm not behind a laptop, I'm adding more tales to my TBR pile, birdwatching from my back porch of our home on the east coast of Australia NSW, and playing cosy games to take a load off."}
               </p>
             </div>
             
             {/* Reader Connection header and quote */}
-            <div className="mb-3 animate-on-scroll fade-up" style={{ animationDelay: '0.4s' }}>
+            {/* <div className="mb-3 animate-on-scroll fade-up" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center mb-3">
                 <h3 className="text-2xl font-semibold text-blue-300/80">Reader Connection</h3>
                 <span className="ml-3 h-px w-12 bg-indigo-400/50 extend-line"></span>
@@ -55,7 +55,7 @@ const AboutSection = () => {
             {"      Stories are bridges between minds. Through my writing I hope to create worlds that readers can inhabit and characters theyll remember long after closing the book."}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           
           {/* Image - appears above text on mobile, to the right on desktop */}
@@ -115,7 +115,7 @@ const AboutSection = () => {
         <div className="group md:text-center pt-6 cursor-default">
           <h4 className="text-lg font-medium text-purple-300 mb-2">Thematic Exploration</h4>
           <div className="bg-gray-900/60 p-4 rounded border-t border-purple-500/30 transform group-hover:border-purple-500/60 transition-all duration-300 group-hover:translate-y-[-2px] group-hover:shadow-lg group-hover:shadow-purple-900/20">
-            <p className="text-gray-400 text-sm">My narratives explore themes of identity, belonging, and the courage to face impossible odds. I believe fantasy allows us to examine real-world questions through new perspectives.</p>
+            <p className="text-gray-400 text-sm">My narratives explore decolonisation and the process of Indigenising the fantasy genre, offering a fresh take on themes of displacement, found family, and dual identities. I write about what it means to exist in places of tension—to be BIPOC in worlds not built for us, to question how we belong, and to reclaim our stories of old and new. </p>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ const AboutSection = () => {
         <div className="group md:text-center pt-6 cursor-default">
           <h4 className="text-lg font-medium text-blue-300 mb-2">Immersive Worlds</h4>
           <div className="bg-gray-900/60 p-4 rounded border-t border-blue-500/30 transform group-hover:border-blue-500/60 transition-all duration-300 group-hover:translate-y-[-2px] group-hover:shadow-lg group-hover:shadow-blue-900/20">
-            <p className="text-gray-400 text-sm">I craft detailed, believable worlds with unique magic systems, complex societies, and rich histories that readers can lose themselves in, discovering new wonders with each chapter.</p>
+            <p className="text-gray-400 text-sm">I build immersive worlds with unique magic systems, deep histories, and vivid landscapes that readers can lose themselves in, discovering new wonders with each chapter. Fantasy allows us to examine real-world struggles through new perspectives, challenging the past while imagining the future.</p>
           </div>
         </div>
       </div>
