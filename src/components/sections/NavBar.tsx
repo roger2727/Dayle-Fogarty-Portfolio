@@ -25,7 +25,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="relative group">
 
-        <Image src={DFLogo} alt="DF Logo"  height={50} />
+        <Image src={DFLogo} alt="DF Logo"  height={40} />
   
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-indigo-400/30 to-purple-400/30 blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
       </div>
@@ -34,8 +34,8 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-8 items-center">
         <NavLink href="#about">About Me</NavLink>
         <NavLink href="#projects">Projects</NavLink>
-        <NavLink href="#">Blog</NavLink>
-        <NavLink href="#">Contact</NavLink>
+        <NavLink href="#blog">Blog</NavLink>
+        <NavLink href="#contact">Contact</NavLink>
       </div>
 
       {/* Mobile Hamburger */}
