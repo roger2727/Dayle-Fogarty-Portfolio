@@ -241,7 +241,7 @@ const PostImage = ({ post, className }: { post: ProcessedPost, className?: strin
           className={`${className} ${loading ? 'opacity-0' : 'opacity-100'}`}
           unoptimized={true}
           priority={true}
-          onLoadingComplete={() => setLoading(false)}
+          onLoad={() => setLoading(false)}
           onError={() => {
             console.warn('Image failed to load, using fallback');
             setImgSrc(defaultCoverImage);
